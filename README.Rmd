@@ -1,0 +1,31 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# motCarData
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of motCarData is to enable quick, convenient and reproducible access to open 'MOT' datasets on car characteristics provided by .gov.uk.
+
+```{r template, eval=FALSE, echo=FALSE}
+download.file("https://github.com/ITSLeeds/RpackageTemplate/archive/master.zip", "template.zip")
+unzip("template.zip")
+file.rename("RpackageTemplate-master/R", "R")
+file.rename("RpackageTemplate-master/DESCRIPTION", "DESCRIPTION")
+# file.rename("RpackageTemplate-master/", ".")
+file.edit("DESCRIPTION")
+unlink("RpackageTemplate-master/", recursive = T)
+unlink("template.zip")
+```
+
