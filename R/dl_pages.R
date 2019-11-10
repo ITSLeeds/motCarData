@@ -1,12 +1,16 @@
+
+key <- apikey
+page <- 1
+
 dl_mot_page <- function(page, key){
   
   # Request 
-  req <- try(GET(
+  req <- try(httr::GET(
     url = "https://beta.check-mot.service.gov.uk/trade/vehicles/mot-tests",
     query = list(
       page = page
     ),
-    add_headers(`Content-type` = "application/json", `x-api-key` = key)
+    httr::add_headers(`Content-type` = "application/json", `x-api-key` = key)
   ))
   
   if(class(req) == "try-error"){
