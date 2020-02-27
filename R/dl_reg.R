@@ -31,9 +31,9 @@ mot_get_reg <- function(registration, key, get_comments = TRUE, ...){
         # Strange Data format
         return(list(main = data, tests = NULL, comments = NULL))
       } else {
-        data_main <- data[,c("vehicleId","registration","make","model",
+        data_main <- data[,names(data)[names(data) %in% c("vehicleId","registration","make","model",
                              "firstUsedDate","fuelType","primaryColour",
-                             "registrationDate", "manufactureDate", "engineSize")]
+                             "registrationDate", "manufactureDate", "engineSize")]]
         data_tests <- data$motTests
         names(data_tests) <- data_main$vehicleId
         data_tests <- dplyr::bind_rows(data_tests, .id = "vehicleId")
