@@ -1,6 +1,6 @@
 Package: motCarData
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Download and analysis of MOT data
 Version: 0.1.0
 Authors@R: c(
     person("Malcolm", "Morgan", email = "m.morgan1@leeds.ac.uk", role = c("aut"), 
@@ -8,18 +8,27 @@ Authors@R: c(
     person("Robin", "Lovelace", email = "rob00x@gmail.com",      role = c("aut","cre"),
       comment = c(ORCID = "0000-0001-5679-6536"))
     )
-Maintainer: The package maintainer <yourself@somewhere.net>
+Maintainer: Malcolm Morgan <m.morgan1@leeds.ac.uk>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 Language: EN-GB
 License: GPL-3
-URL: https://github.com/ITSLeeds/RPackageTemplate, https://itsleeds.github.io/RPackageTemplate/
-BugReports: https://github.com/ITSLeeds/RPackageTemplate/issues
+URL: https://github.com/ITSLeeds/motCarData, https://itsleeds.github.io/motCarData/
+BugReports: https://github.com/ITSLeeds/motCarData/issues
 Encoding: UTF-8
 LazyData: true
 Imports:
-    goodpractice
-RoxygenNote: 6.1.1
+    httr,
+    dplyr,
+    jsonlite,
+    utils,
+    foreach,
+    doSNOW,
+    parallel,
+    checkmate,
+    lubridate,
+    stringr
+RoxygenNote: 7.0.2
 Suggests: 
     covr,
     knitr,
